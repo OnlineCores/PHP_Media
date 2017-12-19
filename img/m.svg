@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" fill="#472243" viewBox="0 0 8 8">
+	<path id="p0" clip-path="url(#c0)" stroke="#fff" stroke-width="1" d="M5 0L4 2L3 0L0 0L0 8L2 8L3 4L4 6L5 4L6 8L8 8L8 0L5 0Z"></path>
+	<clipPath id="c0">
+		<use xlink:href="#p0"></use>
+	</clipPath>
+</svg>

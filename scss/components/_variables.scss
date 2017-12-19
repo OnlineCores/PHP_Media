@@ -1,0 +1,48 @@
+//  1. Colors
+//  2. Media Query Ranges
+//  3. Typography
+//
+//
+// ==========================================================================
+// 1. Colors
+$primary-color: #472243 !default;
+$primary-color-light: lighten($primary-color, 10%) !default;
+$primary-color-dark: darken($primary-color, 10%) !default;
+$secondary-color: #224726 !default;
+$secondary-color-light: lighten($secondary-color, 10%) !default;
+$secondary-color-dark: darken($secondary-color, 10%) !default;
+$link-color: $secondary-color-light !default;
+$form-color: #ccc;
+$border-color: #fff !default;
+//
+//
+// ==========================================================================
+// 2. Media Query Ranges
+$small-screen-width: 800px !default;
+$large-screen-width: 801px !default;
+$small-screen: "only screen and (max-width : #{$small-screen-width})" !default;
+$large-screen: "only screen and (min-width : #{$large-screen-width})" !default;
+//
+//
+// ==========================================================================
+// 3. Typography
+$font-size: 16px !default;
+$font-family-serif: 'Times New Roman',
+Times,
+serif !default;
+$font-family-sans-serif: "Segoe UI",
+Tahoma,
+Geneva,
+Verdana,
+sans-serif !default;
+$font-family-condensed: "Franklin Gothic",
+"Franklin Gothic Medium",
+"Arial Narrow",
+Arial,
+sans-serif !default;
+$font-family-monospaced: "Lucida Console",
+"Consolas",
+"monaco",
+Courier New,
+Courier,
+monospace !default;

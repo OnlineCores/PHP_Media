@@ -1,0 +1,88 @@
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+    height: 70%;
+    border: 2px solid $border-color;
+    overflow-y: auto;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 300ms;
+    animation-name: slideIn;
+    animation-duration: 300ms;
+    bottom: -100%;
+    width: calc(100% - 320px);
+    @media #{$small-screen} {
+        width: 100%;
+        th {
+            padding: 0.5vw 1vw;
+            text-align: left;
+        }
+        td {
+            padding: 0.5vw 1vw;
+        }
+    }
+    .modal-header {
+        padding: 0 16px;
+        background-color: $primary-color;
+        color: #fff;
+        height: 64px;
+        line-height: 64px;
+        width: 100%;
+        border-bottom: 2px solid $border-color;
+    }
+    &.open-modal {
+        z-index: 8 !important;
+        display: block !important;
+        bottom: 0px !important;
+    }
+    .modal-content {
+        background: #fff;
+        h1,
+        h2,
+        h3,
+        h4 {
+            padding: 1vw;
+        }
+        p {
+            padding: 0 1vw 1vw;
+        }
+        table {
+            width: 100%;
+            background: white;
+            thead {
+                tr {
+                    background-color: silver;
+                    th {
+                        padding: 1vw 2vw;
+                        text-align: left;
+                    }
+                }
+            }
+            tbody {
+                tr:nth-child(even) {
+                    background-color: #f1f1f1;
+                }
+                td {
+                    padding: 1vw 2vw;
+                }
+            }
+        }
+    }
+}
+
+#modal-overlay {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 7;
+    display: block;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 300ms;
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+}

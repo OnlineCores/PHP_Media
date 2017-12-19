@@ -1,0 +1,143 @@
+.row {
+    padding: 0.4vw 0.5vw;
+}
+
+.column {
+    padding: 0.4vw 0.5vw;
+    flex-basis: 100%;
+}
+
+@media #{$large-screen} {
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0.5vw 1vw;
+    }
+    .column {
+        flex: 1;
+        padding: 0.5vw 1vw;
+    }
+    ._25 {
+        flex: 2.5;
+    }
+    ._5 {
+        flex: 5;
+    }
+}
+
+.grid {
+    margin-top: 32px;
+    padding: 1vw;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+    align-items: flex-end;
+    li {
+        -webkit-box-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        width: 15vw;
+        min-width: 256px;
+        margin: 1vw 0;
+        background-color: #fff;
+        font-family: "Consolas", Courier New, Courier, monospace;
+        img,
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            p {
+                text-indent: 0;
+                padding: 0px 8px 4px;
+            }
+        }
+        .copy {
+            display: flex;
+            flex-direction: row;
+            button {
+                padding: 0.5vw 0;
+                &:active {
+                    padding: 0.6vw 0 0.4vw;
+                }
+            }
+        }
+    }
+}
+
+.list {
+    margin-top: 32px;
+    padding: 1vw;
+    flex-flow: column wrap;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    width: 100%;
+    li {
+        width: 100%;
+        max-height: 80px;
+        margin: 1vw 0;
+        background-color: #fff;
+        font-family: "Consolas", Courier New, Courier, monospace;
+        display: flex;
+        border: inset 1px silver;
+        img,
+        svg {
+            height: 78px;
+            width: 156px;
+        }
+        .info {
+            display: flex;
+            flex-flow: column wrap;
+            flex-grow: 1;
+            p {
+                font-size: 1.1em;
+                text-indent: 0;
+                padding: 7px 0px;
+            }
+        }
+        .copy {
+            display: flex;
+            flex-direction: column;
+            button {
+                padding: 0.1vw 1vw;
+                &:active {
+                    padding: 0.2vw 1vw 0;
+                }
+            }
+        }
+    }
+}
+
+@media #{$small-screen} {
+    .grid,
+    .list {
+        padding: 1vw;
+        li {
+            border: inset 1px silver;
+        }
+    }
+    .list {
+        li {
+            max-height: 64px;
+            img,
+            svg {
+                height: 62px;
+                width: 124px;
+            }
+            .info {
+                p {
+                    font-size: 0.9em;
+                    padding: 6px 0px;
+                }
+            }
+        }
+    }
+}

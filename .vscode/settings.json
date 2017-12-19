@@ -1,0 +1,26 @@
+{
+	"beautify.options": {
+		"indent_size": 4,
+		"html": {
+			"end_with_newline": true,
+			"js": {
+				"indent_size": 4
+			},
+			"css": {
+				"indent_size": 4
+			}
+		},
+		"css": {
+			"indent_size": 4
+		},
+		"js": {
+			"preserve-newlines": true
+		}
+	},
+	"beautify.tabSize": 4,
+	"files.exclude": {
+		"**/.sass-cache": true
+	},
+	"editor.tabSize": 4,
+	"editor.fontFamily": "Lucida Console, Consolas, 'Courier New', monospace"
+}

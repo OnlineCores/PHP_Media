@@ -1,0 +1,40 @@
+#settings {
+    display: flex;
+    position: fixed;
+    width: calc(100% - 320px);
+    border-bottom: 2px solid #fff;
+}
+
+input {
+    border: inset 1px $form-color;
+    border-radius: 0px;
+    width: 96px;
+    float: left;
+    padding: 0.6vw 1vw;
+    font-family: $font-family-monospaced;
+    font-size: inherit;
+    color: #212121;
+    font-weight: bold;
+}
+
+button {
+    flex-grow: 1;
+    font-family: $font-family-monospaced;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    background-color: $form-color;
+    padding: 0.1vw;
+    border-width: 1px;
+    &:active {
+        padding: 0.2vw 0.1vw 0;
+        border: inset 1px;
+        background-color: darken($form-color, 2%);
+    }
+}
+
+@media #{$small-screen} {
+    #settings {
+        width: 100%;
+    }
+}

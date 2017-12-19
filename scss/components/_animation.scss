@@ -1,0 +1,121 @@
+/**
+* Button Animation
+*
+* How to use
+* https://codepen.io/Mikael-Sundstrom/pen/WoEEZj?editors=1000
+*
+* [class*="social_lnk"]{
+*   display:inline-block;
+*   margin-right:12px;
+*   padding:.325em;
+*   border-radius:50%;
+*   background-color:#26a69a;
+*   width:2.5rem;
+*   height:2.5rem;
+*   box-shadow:0 .25em .25em rgba(0,0,0,.3);
+*   transition:all .3s ease-out;
+*   animation:social-hoverOff .3s ease-out;
+* }
+* [class*="social_lnk"]:hover,
+* [class*="social_lnk"]:focus{
+*   background-color:currentColor;
+*   transform:scale(1.12);
+*   box-shadow:0 .5em .5em rgba(0,0,0,.4);
+*   animation:social-hoverOn .3s ease-out;
+* }
+* [class*="social_lnk"].-clicked{
+*   animation:pressed-social .3s ease-out;
+* }
+*
+*
+*
+* (function () {
+*   // add click animation to social links
+*   var socials = document.querySelectorAll("[class*=social_lnk]");
+*   var i = socials.length;
+*   var cls = "-clicked";
+*   while (i--) {
+*     socials[i].addEventListener("click", function(e){
+*       var lnk = e.target;
+*       lnk.classList.add(cls);
+*
+*       // Allow time for animation to complete then remove
+*       setTimeout(function() {
+*         lnk.classList.remove(cls);
+*       }, 300);
+*     }, false);
+*   }
+* })();
+**/
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(.8);
+        background-color: #3B2D4A;
+        box-shadow: 0 .5em .5em rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+/**
+* Modal Animation
+*
+* How to use
+*
+* -webkit-animation-name: fadeIn;
+* -webkit-animation-duration: 300ms;
+* animation-name: fadeIn;
+* animation-duration: 300ms;
+*
+* -webkit-animation-name: slideIn;
+* -webkit-animation-duration: 300ms;
+* animation-name: slideIn;
+* animation-duration: 300ms;
+*
+**/
+
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -100%;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -100%;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
